@@ -2,9 +2,9 @@
 
 namespace IbrahimBougaoua\FilamentSortOrder;
 
-use Spatie\LaravelPackageTools\Package;
-use IbrahimBougaoua\FilamentSortOrder\Commands\FilamentSortOrderCommand;
 use Filament\PluginServiceProvider;
+use IbrahimBougaoua\FilamentSortOrder\Commands\FilamentSortOrderCommand;
+use Spatie\LaravelPackageTools\Package;
 
 class FilamentSortOrderServiceProvider extends PluginServiceProvider
 {
