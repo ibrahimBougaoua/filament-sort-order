@@ -4,4 +4,5 @@ namespace IbrahimBougaoua\FilamentSortOrder;
 
 class FilamentSortOrder
 {
+    
 }
