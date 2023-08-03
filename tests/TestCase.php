@@ -2,9 +2,9 @@
 
 namespace IbrahimBougaoua\FilamentSortOrder\Tests;
 
+use IbrahimBougaoua\FilamentSortOrder\FilamentSortOrderServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use IbrahimBougaoua\FilamentSortOrder\FilamentSortOrderServiceProvider;
 
 class TestCase extends Orchestra
 {

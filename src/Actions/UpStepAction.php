@@ -24,7 +24,7 @@ class UpStepAction extends Action
 
     protected function handle(Model $record, array $data)
     {
-        $sort_order = $record->switchSortOrder("previous",$record,$record->sort_order,$record->sort_order);
+        $sort_order = $record->switchSortOrder('previous', $record, $record->sort_order, $record->sort_order);
         $record->sort_order = $sort_order;
         $record->save();
     }
