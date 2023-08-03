@@ -32,7 +32,7 @@ This is the contents of the published config file:
 
 ```php
 return [
-	'table' => 'users',
+	'table' => 'users', // Table you want to affect.
 ];
 ```
 
@@ -41,16 +41,29 @@ Optionally, you can publish the views using
 ```bash
 php artisan vendor:publish --tag="filament-sort-order-views"
 ```
+<b>Usage :</b>
+
+```bash
+->actions([
+    DownStepAction::make(),
+    UpStepAction::make(),
+])
+```
+To make sure that the model returns results with the order you changed, Add <b>SortOrder</b> trait to model.
+
+```bash
+class User extends Model
+{
+    use SortOrder;
+    .....
+}
+```
 
 ## Testing
 
 ```bash
 composer test
 ```
-
-## Changelog
-
-Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
 
 ## Contributing
 
