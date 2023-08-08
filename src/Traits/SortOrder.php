@@ -10,11 +10,11 @@ trait SortOrder
     public static function bootSortOrder(): void
     {
         static::creating(function ($model) {
-            $model->sort_order = $model->count() + 1;
+            $model->sort_order = $model->id;
         });
 
         static::addGlobalScope('sort_order', function (Builder $builder) {
-            $builder->orderBy('sort_order', 'asc');
+            $builder->orderBy('sort_order', config('filament-sort-order.sort'));
         });
     }
 
