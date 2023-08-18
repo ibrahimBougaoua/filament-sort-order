@@ -9,8 +9,9 @@ trait SortOrder
 {
     public static function bootSortOrder(): void
     {
-        static::creating(function ($model) {
+        static::created(function ($model) {
             $model->sort_order = $model->id;
+            $model->save();
         });
 
         static::addGlobalScope('sort_order', function (Builder $builder) {
