@@ -8,7 +8,7 @@ Transform the sorting order of any table effortlessly by installing this package
 
 <a href="https://www.youtube.com/watch?v=Uq7rSJSuWlw" target="_blank">Youtube Video</a>
 <br /><br />
-[<img src="https://raw.githubusercontent.com/ibrahimBougaoua/screenshot/main/images/sort.png" width="100%">](https://www.youtube.com/watch?v=Uq7rSJSuWlw)
+[<img src="https://raw.githubusercontent.com/ibrahimBougaoua/screenshot/main/images/sort.png" width="100%" class="filament-hidden">](https://www.youtube.com/watch?v=Uq7rSJSuWlw)
 
 ## Installation
 
