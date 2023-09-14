@@ -17,7 +17,6 @@ class UpStepAction extends Action
 
     protected function setUp(): void
     {
-        $this->requiresConfirmation();
         $this->modalWidth = 'sm';
         $this->action($this->handle(...));
     }
