@@ -7,7 +7,6 @@
 // 'table3' =>'products',
 //And so on...
 return [
-    'table1' =>'users',
+    'table1' => 'users',
     'sort' => 'asc',
 ];
-
