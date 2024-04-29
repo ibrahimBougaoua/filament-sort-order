@@ -10,12 +10,13 @@ trait SortOrder
     public static function bootSortOrder(): void
     {
         static::created(function ($model) {
-            $model->sort_order = $model->id;
+            $sort_column = config('filament-sort-order.column');
+            $model->sort_column = $model->id;
             $model->save();
         });
 
         static::addGlobalScope('sort_order', function (Builder $builder) {
-            $builder->orderBy('sort_order', config('filament-sort-order.sort'));
+            $builder->orderBy(config('filament-sort-order.column'), config('filament-sort-order.sort'));
         });
     }
 
@@ -32,7 +33,7 @@ trait SortOrder
 
     public function changeSortOrder($sort_order, $value): int
     {
-        $model = Model::where('sort_order', $sort_order)->first();
+        $model = Model::where(config('filament-sort-order.column'), $sort_order)->first();
 
         $old_sort_order = $model->sort_order;
 
@@ -46,12 +47,12 @@ trait SortOrder
 
     public function getNextModelId(Model $model, $sort_order): int
     {
-        return $model->where('sort_order', '>', $sort_order)->min('sort_order') ?? 0;
+        return $model->where(config('filament-sort-order.column'), '>', $sort_order)->min('sort_order') ?? 0;
     }
 
     public function getPreviousModelId(Model $model, $sort_order): int
     {
-        return $model->where('sort_order', '<', $sort_order)->max('sort_order') ?? 0;
+        return $model->where(config('filament-sort-order.column'), '<', $sort_order)->max('sort_order') ?? 0;
     }
 
     public function isFirstRecord(Model $model): int
