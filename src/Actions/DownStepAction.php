@@ -8,11 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class DownStepAction extends Action
 {
-    protected string|Closure|null $icon = 'heroicon-o-arrow-down';
-
     public static function make(?string $name = 'down'): static
     {
-        return parent::make($name);
+        $instance = parent::make($name);
+        $instance->icon('heroicon-o-arrow-down');
+        return $instance;
     }
 
     protected function setUp(): void
