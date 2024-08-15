@@ -4,11 +4,12 @@ namespace IbrahimBougaoua\FilamentSortOrder\Actions;
 
 use Closure;
 use Filament\Tables\Actions\Action;
+use Illuminate\Contracts\Support\Htmlable;
 use Illuminate\Database\Eloquent\Model;
 
 class UpStepAction extends Action
 {
-    protected string|Closure|null $icon = 'heroicon-o-arrow-up';
+    protected Htmlable|string|Closure|null $icon = 'heroicon-o-arrow-up';
 
     public static function make(?string $name = 'up'): static
     {
