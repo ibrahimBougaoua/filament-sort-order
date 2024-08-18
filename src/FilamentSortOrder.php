@@ -2,6 +2,4 @@
 
 namespace IbrahimBougaoua\FilamentSortOrder;
 
-class FilamentSortOrder
-{
-}
+class FilamentSortOrder {}

@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class UpStepAction extends Action
 {
-    protected string | Htmlable | Closure | null $icon = 'heroicon-o-arrow-up';
+    protected string|Htmlable|Closure|null $icon = 'heroicon-o-arrow-up';
 
     public static function make(?string $name = 'up'): static
     {
