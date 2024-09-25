@@ -26,20 +26,19 @@ php artisan vendor:publish --tag="filament-sort-order-config"
 
 This is the contents of the published config file:
 
-// You can incorporate additional tables by appending "table{number}" as an illustration.
-// 'table1' =>'users',
-// 'table2' =>'posts',
-// 'table3' =>'products',
-//And so on...
-
 ```php
 return [
-    'table1' => 'users', // Specify the table to be affected.
-    // You can incorporate additional tables by appending "table{number}" as an illustration.
-    // 'table2' => 'posts',
-    // 'table3' => 'products',
-    // And so on...
-    'sort' => 'asc', // Default sorting order.
+
+    /** Add the tables to be migrated */
+    'tables' => [
+        'users',
+    ],
+
+    /* The column name to be used for sorting */
+    'sort_column_name' => 'sort_column',
+
+    /* Sort Order asc or desc */
+    'sort' => 'asc',
 ];
 ```
 
