@@ -6,6 +6,10 @@
 
 Transform the sorting order of any table effortlessly by installing this package. It provides seamless functionality without requiring any manual code writing. Simply install it, and you're good to go !
 
+## Support us
+
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://buymeacoffee.com/ibrahimbougaoua)
+
 <a href="https://www.youtube.com/watch?v=Uq7rSJSuWlw" target="_blank">Youtube Video</a>
 <br /><br />
 [<img src="https://raw.githubusercontent.com/ibrahimBougaoua/screenshot/main/images/sort.png" width="100%" class="filament-hidden">](https://www.youtube.com/watch?v=Uq7rSJSuWlw)
