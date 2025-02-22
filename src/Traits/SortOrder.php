@@ -18,7 +18,7 @@ trait SortOrder
     {
         static::created(function ($model) {
             $model->setSortColumn();
-            $model->{$model->sortColumn} = $model->id;
+            $model->{$model->sortColumn} = $model->getKey();
             $model->save();
         });
 
