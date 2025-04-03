@@ -23,7 +23,7 @@ trait SortOrder
         });
 
         static::addGlobalScope('sort_order', function (Builder $builder) {
-            $model = new static();
+            $model = new static;
             $builder->orderBy($model->sortColumn, config('filament-sort-order.sort', 'asc'));
         });
     }
@@ -31,10 +31,10 @@ trait SortOrder
     public function switchSortOrder($action, Model $model, $sort_order, $value): int
     {
         if ($action === 'next') {
-            $model_id = !$this->getNextModelId($model,
+            $model_id = ! $this->getNextModelId($model,
                 $sort_order) ? $this->isFirstRecord($model) : $this->getNextModelId($model, $sort_order);
         } else {
-            $model_id = !$this->getPreviousModelId($model,
+            $model_id = ! $this->getPreviousModelId($model,
                 $sort_order) ? $this->isLastRecord($model) : $this->getPreviousModelId($model, $sort_order);
         }
 
@@ -49,6 +49,7 @@ trait SortOrder
             $old_sort_order = $model->{$this->sortColumn};
             $model->{$this->sortColumn} = $value;
             $model->save();
+
             return $old_sort_order;
         }
 
@@ -68,12 +69,14 @@ trait SortOrder
     public function isFirstRecord(Model $model): int
     {
         $record = $model->orderBy($this->sortColumn, 'asc')->first();
+
         return $record ? $record->{$this->sortColumn} : 0;
     }
 
     public function isLastRecord(Model $model): int
     {
         $record = $model->orderBy($this->sortColumn, 'desc')->first();
+
         return $record ? $record->{$this->sortColumn} : 0;
     }
 }
