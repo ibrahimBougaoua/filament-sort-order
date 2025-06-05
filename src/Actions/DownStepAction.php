@@ -24,8 +24,16 @@ class DownStepAction extends Action
 
     protected function handle(Model $record, array $data)
     {
-        $sort_order = $record->switchSortOrder('next', $record, $record->sort_order, $record->sort_order);
-        $record->sort_order = $sort_order;
-        $record->save();
+        // Ensure the sort column is set
+        if (method_exists($record, 'setSortColumn')) {
+            $record->setSortColumn();
+        }
+        
+        // Initialize sort order if needed
+        if (method_exists($record, 'initializeSortOrder')) {
+            $record->initializeSortOrder();
+        }
+        
+        $record->switchSortOrder('next', $record);
     }
 }

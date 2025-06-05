@@ -9,7 +9,7 @@ return [
     ],
 
     /* The column name to be used for sorting */
-    'sort_column_name' => 'sort_column',
+    'sort_column_name' => 'sort_order',
 
     /* Sort Order asc or desc */
     'sort' => 'asc',

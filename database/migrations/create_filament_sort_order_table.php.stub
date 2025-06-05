@@ -8,7 +8,7 @@ return new class extends Migration
 {
     public function up()
     {
-        
+
         $sortColumn = config( 'filament-sort-order.sort_column_name', 'sort_order' );
 
         foreach ( config( 'filament-sort-order.tables' ) as $key => $table ) {
@@ -22,5 +22,5 @@ return new class extends Migration
 
         }
     }
-    
+
 };
